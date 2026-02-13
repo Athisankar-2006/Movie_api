@@ -1,10 +1,13 @@
 import express from "express";
-import movieRoutes from "./routes/movies.js"
+import movieRoutes from "./routes/movies.js";
+import connectDB from "./lib/db.js";
 
 const app=express();
 
 const PORT=3001;
 
+//here is the database connection
+connectDB();
 
 app.get("/", (req,res)=>{
     res.json({msg:"hellow student !"});
