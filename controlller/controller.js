@@ -4,7 +4,8 @@ export const movieIndex = (req,res)=>{
 };
 
 export const movieCreate=(req,res)=>{
-    res.send("create a movie");
+   console.log(req.body);
+   return res.json(req.body);
 
 };
 
