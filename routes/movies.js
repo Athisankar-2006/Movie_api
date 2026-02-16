@@ -3,7 +3,7 @@ import express from "express"
 
 const router=express.Router();
 
-import { movieIndex ,movieCreate,movieUpdate,movieDelete} from "../controlller/controller.js";
+import { movieIndex ,movieCreate,movieUpdate,movieDelete,moviedetail,} from "../controlller/controller.js";
 
 //crud functionality of movies
 
@@ -12,6 +12,9 @@ import { movieIndex ,movieCreate,movieUpdate,movieDelete} from "../controlller/c
 
 // R- for reading 
 router.get("/", movieIndex);
+
+
+router.get("/:id", moviedetail);
 
 
 // C- for creatinf
