@@ -11,22 +11,22 @@ import { movieIndex ,movieCreate,movieUpdate,movieDelete} from "../controlller/c
 
 
 // R- for reading 
-router.get("/",movieIndex);
+router.get("/", movieIndex);
 
 
 // C- for creatinf
-router.post("/",movieCreate);
+router.post("/", movieCreate);
 
 
 
 
 // U- for update
-router.put("/:id",movieUpdate);
+router.put("/:id", movieUpdate);
 
 
 
 // D-delete movies
-router.delete("/:id",movieDelete);
+router.delete("/:id", movieDelete);
 
 
 export default router;
