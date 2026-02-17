@@ -40,8 +40,24 @@ export const moviedetail=async(req,res)=>{
     }
 }
 
-export const movieUpdate=(req,res)=>{
-    res.send("update a movie")
+export const movieUpdate=async(req,res)=>{
+
+    try{
+        const updatedmovie=await Movie.findOneAndUpdate(
+            {_id: req.params.id},
+            {
+                title: req.body.title,
+                desc: req.body.desc,
+            },
+            {
+                new:true,
+            }
+        
+        )
+        res.status(200).json(updatedmovie);
+    }catch(error){
+        res.status(400).send({message: error.message});
+    }
 
 };
 
